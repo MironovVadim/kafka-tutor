@@ -22,13 +22,13 @@ public class ProducerDemoWithCallback {
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
         // create the producer
-        KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
+        KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
 
         for (int i = 0; i < 10; i++) {
             // create a producer record
             ProducerRecord<String, String> record =
-                    new ProducerRecord<String, String>("first_topic", "hello world " + i);
+                    new ProducerRecord<>("first_topic", "hello world " + (i % 2));
 
             // send data - asynchronous
             producer.send(record, (recordMetadata, e) -> {

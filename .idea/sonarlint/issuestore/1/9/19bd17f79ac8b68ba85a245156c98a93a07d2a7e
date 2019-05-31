@@ -1,0 +1,14 @@
+
+V
+squid:S1064"9Replace this use of System.out or System.err by a logger.(…€Ãì8—ÿÉë°-
+nsquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(­Ÿáüıÿÿÿÿ8—ÿÉë°-
+nsquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.(†óÁıøÿÿÿÿ8—ÿÉë°-
+hsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ºÏµ@8©·Íë°-
+Xsquid:S1854,":Remove this useless assignment to local variable "logger".(ıáÿ8—ÿÉë°-
+ysquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(ô½îúÿÿÿÿ8ÀÆÌë°-
+gsquid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(¤ÖÁ¯ûÿÿÿÿ
+Isquid:S1481,"+Remove this unused "logger" local variable.(ıáÿ8—ÿÉë°-
+©%squid:RedundantThrowsDeclarationCheck+"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(àÒşüøÿÿÿÿ8—ÿÉë°-
+´%squid:RedundantThrowsDeclarationCheck+"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(àÒşüøÿÿÿÿ8¼‡ë°-
+isquid:CommentedOutCodeLine("<This block of commented-out lines of code should be removed.(„§ñ£8ÀÆÌë°-
+hsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(×âûc8—ÿÉë°-

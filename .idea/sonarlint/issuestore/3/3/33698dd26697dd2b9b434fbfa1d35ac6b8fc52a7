@@ -1,0 +1,8 @@
+
+Xsquid:UselessImportCheck"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(³Éàþ
+Vsquid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ
+Vsquid:S1854":Remove this useless assignment to local variable "logger".(èÍ†¤ùÿÿÿÿ
+Gsquid:S1481"+Remove this unused "logger" local variable.(èÍ†¤ùÿÿÿÿ
+rsquid:UselessImportCheck"NRemove this unused import 'org.apache.kafka.clients.consumer.ConsumerRecords'.(ÖáíÁ
+qsquid:UselessImportCheck"MRemove this unused import 'org.apache.kafka.clients.consumer.ConsumerRecord'.(±’–„

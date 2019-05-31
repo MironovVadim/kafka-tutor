@@ -25,8 +25,8 @@ public class ElasticSearchConsumer {
 
     public static RestHighLevelClient elasticSearchConsumer() {
         String hostname = "el-search-4723054832.ap-southeast-2.bonsaisearch.net";
-        String login = "o8ke39lvf";
-        String password = "jqtu46c588";
+        String login = "vl7acko22p";
+        String password = "ss5hdi7jvm";
 
 
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
@@ -37,24 +37,28 @@ public class ElasticSearchConsumer {
                 .setHttpClientConfigCallback((httpAsyncClientBuilder ->
                         httpAsyncClientBuilder.setDefaultCredentialsProvider(credentialsProvider)));
         return new RestHighLevelClient(builder);
+//        return null;
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Logger logger = LoggerFactory.getLogger(ElasticSearchConsumer.class);
 
         KafkaConsumer<String, String> consumer = ConsumerDemoGroups.kafkaConsumer();
-        RestHighLevelClient client = ElasticSearchConsumer.elasticSearchConsumer();
+//        RestHighLevelClient client = ElasticSearchConsumer.elasticSearchConsumer();
 
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord cr : records) {
-                Object value = cr.value();
-                IndexRequest request = new IndexRequest("twitter", "tweets")
-                        .source(value, XContentType.JSON);
+                System.out.println("NOT FILTERED VALUE: " + cr.value());
+//                Object value = cr.value();
+//                IndexRequest request = new IndexRequest("twitter", "tweets")
+//                        .source(value, XContentType.JSON);
+//
+//                IndexResponse indexResponse = client.index(request, RequestOptions.DEFAULT);
+//                logger.info(indexResponse.getId());
+//                consumer.commitSync();
+//                Thread.sleep(1000);
 
-                IndexResponse indexResponse = client.index(request, RequestOptions.DEFAULT);
-                logger.info(indexResponse.getId());
-                Thread.sleep(1000);
             }
         }
 //        client.close();
